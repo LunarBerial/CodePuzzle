@@ -1,2 +1,2 @@
 # CodePuzzle
-Some interesting code for practice
+Some interesting codes for practice
