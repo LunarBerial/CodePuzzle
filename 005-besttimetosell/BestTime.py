@@ -22,5 +22,16 @@ def bestTime(prices):
             max_money = prices[i] - min_price
     return max_money
 
+# 若可以买卖多次，求最大获利
+#LeetCode：122
+def bestTime2(prices):
+    if len(prices) == 0:
+        return 0
+    gain = 0
+    for idx, i in enumerate(prices[1:]):
+        if i > prices[idx]:
+            gain += i - prices[idx]
+    return gain
+
 if __name__== "__main__":
     print(bestTime([7,1,5,3,6,4]))
